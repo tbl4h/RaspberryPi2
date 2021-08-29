@@ -42,8 +42,8 @@ mkdir build-glibc && cd build-glibc
 make install-bootstrap-headers=yes install-headers
 make -j8 csu/subdir_lib
 install csu/crt1.o csu/crti.o csu/crtn.o /opt/cross-pi-gcc/arm-linux-gnueabihf/lib
-arm-linux-gnueabihf-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /opt/cross-pi-gcc/arm-linux-gnueabihf/lib/libc.so
-touch /opt/cross-pi-gcc/arm-linux-gnueabihf/include/gnu/stubs.h
+arm-linux-gnueabihf-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /mnt/d/opt/cross-pi-gcc/arm-linux-gnueabihf/lib/libc.so
+touch /mnt/d/opt/cross-pi-gcc/arm-linux-gnueabihf/include/gnu/stubs.h
 cd ..
 cd build-gcc
 make -j8 all-target-libgcc
